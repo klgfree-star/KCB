@@ -1,0 +1,13 @@
+; QUY ƯỚC (Ctrl / Alt / Ctrl+Alt):
+;  Mỗi dòng chỉ cần khai báo 1 lần với Ctrl+Alt (vd ^!s).
+;  Code TỰ SINH thêm 2 hotkey còn lại cho cùng dịch vụ:
+;    - Ctrl+chữ (vd ^s)         => Down 1 lần
+;    - Alt+chữ (vd !s)          => Down 0 lần (không Down)
+;    - Ctrl+Alt+chữ (vd ^!s)    => Down 2 lần
+^!s:: "siêu âm mắt"
+^!o:: "oct bán phần sau"
+^!c:: "trích chắp"
+^!d:: "chụp đáy mắt không huỳnh quang"
+^!t:: "thị trường"
+^!n:: "nặn tuyến"
+^!m:: "mở bao"

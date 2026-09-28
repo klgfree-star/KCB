@@ -1,0 +1,23 @@
+; File cấu hình hotkey cho thuốc
+; Định dạng: <hotkey>::"<text>"
+; Ký hiệu: + = Shift, # = Windows, ^ = Ctrl, ! = Alt
+; Ví dụ: +#s::"sanlein0,1" nghĩa là Shift+Win+S sẽ gõ "sanlein0,1"
+
+; ===== THUỐC NHỎ MẮT =====
++#s::"sanlein0,1", 1, "4 lần/ngày"
++#v::"vigamox 0.5%", 1, "4 lần/ngày"
++#c::"cravit", 1, "4 lần/ngày"
++#t::"dd tobra", 1, "4 lần/ngày"
++#y::"tobradex", 1 , "2 lần/ngày "
++#h::"hylaform", 20, "4 lần/ngày"
++#r::"refresh", 1, "4 lần/ngày"
+
+; ===== THUỐC UỐNG (nhấn giữ Space rồi nhấn phím) =====
+Space+m::"medaxetine", 10, "2 viên/ngày"
+Space+s::"sáng mắt", 30, "2 viên/ngày"
+Space+a::"abagamax", 40, "2 viên/ngày"
+
+
+
+
+
