@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bản Tự Khai Tiền Sử Và Bệnh Sử Chuyên Khoa Mắt</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 13pt;
+            line-height: 1.4;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .page {
+            background: white;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .header-left, .header-right {
+            width: 48%;
+        }
+        .title {
+            text-align: center;
+            font-size: 15pt;
+            font-weight: bold;
+            margin: 15px 0;
+            text-transform: uppercase;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 12px;
+            margin-bottom: 6px;
+        }
+        .row {
+            margin-bottom: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        label {
+            margin-right: 5px;
+        }
+        input[type="text"] {
+            font-family: inherit;
+            font-size: 12pt;
+            border: none;
+            border-bottom: 1px dotted #000;
+            outline: none;
+            padding: 2px 5px;
+            flex-grow: 1;
+            background: transparent;
+        }
+        input[type="checkbox"] {
+            transform: scale(1.2);
+            margin: 0 4px 0 10px;
+            cursor: pointer;
+        }
+        textarea {
+            font-family: inherit;
+            font-size: 12pt;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 6px;
+            box-sizing: border-box;
+            resize: vertical;
+            margin-top: 4px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 4px 0;
+        }
+        .checkbox-item {
+            display: inline-flex;
+            align-items: center;
+        }
+        .footer {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .footer-right {
+            width: 50%;
+            margin-left: auto;
+        }
+        .no-print-btn {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn-print {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14pt;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-print:hover {
+            background-color: #0056b3;
+        }
+
+        /* Định dạng đặc biệt khi In */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .page {
+                box-shadow: none;
+                padding: 0;
+                width: 100%;
+            }
+            .no-print-btn {
+                display: none;
+            }
+            textarea {
+                border: none;
+                border-bottom: 1px dotted #000;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="no-print-btn">
+    <button class="btn-print" onclick="window.print()">🖨️ In Bệnh Sử / Xuất PDF</button>
+</div>
+
+<div class="page">
+    <!-- TIÊU ĐỀ HÀNH CHÍNH -->
+    <div class="header">
+        <div class="header-left">
+            SỞ Y TẾ<br>
+            BỆNH VIỆN MẮT HÀ NỘI<br>
+            ─────────
+        </div>
+        <div class="header-right">
+            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br>
+            Độc lập - Tự do - Hạnh phúc<br>
+            ─────────────────────
+        </div>
+    </div>
+
+    <div class="title">BẢN TỰ KHAI TIỀN SỬ VÀ BỆNH SỬ CHUYÊN KHOA MẮT</div>
+
+    <!-- PHẦN I -->
+    <div class="section-title">I. THÔNG TIN HÀNH CHÍNH & TƯ CÁCH NGƯỜI TỰ KHAI</div>
+    <div class="row">
+        <label>1. Họ và tên người bệnh:</label>
+        <input type="text" style="width: 250px;">
+        <label style="margin-left: 15px;">Năm sinh:</label>
+        <input type="text" style="width: 70px;">
+        <label style="margin-left: 15px;">Giới:</label>
+        <label class="checkbox-item"><input type="checkbox"> Nam</label>
+        <label class="checkbox-item"><input type="checkbox"> Nữ</label>
+    </div>
+    <div class="row">
+        <label>2. Số CCCD/Định danh:</label>
+        <input type="text" style="width: 150px;">
+        <label style="margin-left: 10px;">Điện thoại:</label>
+        <input type="text" style="width: 130px;">
+        <label style="margin-left: 10px;">Địa chỉ:</label>
+        <input type="text" style="width: 200px;">
+    </div>
+    <div class="row">
+        <label>3. Người khai báo:</label>
+        <label class="checkbox-item"><input type="checkbox"> Người bệnh tự khai</label>
+        <label class="checkbox-item" style="margin-left: 10px;"><input type="checkbox"> Người đại diện hợp pháp (Nếu khai thay)</label>
+    </div>
+    <div class="row">
+        <label>Họ tên:</label>
+        <input type="text" style="width: 200px;">
+        <label style="margin-left: 10px;">Quan hệ:</label>
+        <input type="text" style="width: 100px;">
+        <label style="margin-left: 10px;">Lý do:</label>
+        <label class="checkbox-item"><input type="checkbox"> Trẻ em</label>
+        <label class="checkbox-item"><input type="checkbox"> Sức khỏe yếu</label>
+    </div>
+
+    <!-- PHẦN II -->
+    <div class="section-title">II. LÝ DO ĐẾN KHÁM & DIỄN BIẾN BỆNH HIỆN TẠI</div>
+    <div class="row">
+        <label>1. Mắt bị bệnh hiện tại:</label>
+        <label class="checkbox-item"><input type="checkbox"> Mắt Phải (MP)</label>
+        <label class="checkbox-item"><input type="checkbox"> Mắt Trái (MT)</label>
+        <label class="checkbox-item"><input type="checkbox"> Cả Hai Mắt</label>
+    </div>
+    <div class="row">
+        <label>Bị từ bao giờ:</label>
+        <input type="text">
+    </div>
+    <div class="row">
+        <label style="width: 100%;">2. Triệu chứng khó chịu nhất (ghi rõ nhìn mờ, đỏ mắt, đau nhức, chói cộm, chảy nước mắt, đốm đen, chấn thương...):</label>
+        <textarea rows="3"></textarea>
+    </div>
+    <div class="row">
+        <label style="width: 100%;">3. Diễn biến bệnh và các loại thuốc nhỏ mắt/thuốc uống đã tự dùng trước khi đến khám:</label>
+        <textarea rows="3"></textarea>
+    </div>
+
+    <!-- PHẦN III -->
+    <div class="section-title">III. TIỀN SỬ BỆNH VỀ MẮT (Người bệnh tự khai)</div>
+    <div class="row">
+        <label style="width: 100%;">1. Bệnh lý về mắt đã/đang mắc:</label>
+        <div class="checkbox-group" style="padding-left: 10px;">
+            <label class="checkbox-item"><input type="checkbox"> Chưa từng mắc bệnh mắt</label>
+            <label class="checkbox-item"><input type="checkbox"> Glaucoma</label>
+            <label class="checkbox-item"><input type="checkbox"> Đục thủy tinh thể</label><br>
+            <label class="checkbox-item">
+                <input type="checkbox"> Cận/viễn/loạn thị 
+                (Đeo kính áp tròng/Ortho-K: 
+                <input type="checkbox" style="margin-left: 5px;"> Có 
+                <input type="checkbox" style="margin-left: 5px;"> Không)
+            </label><br>
+            <label class="checkbox-item"><input type="checkbox"> Bệnh võng mạc, viêm màng bồ đào, khô mắt</label>
+        </div>
+    </div>
+    <div class="row">
+        <label style="width: 100%;">2. Phẫu thuật, can thiệp hoặc chấn thương mắt cũ (ghi rõ mổ cận LASIK/SMILE, mổ Phaco, cắt dịch kính, tiêm thuốc mắt, mổ lác, chấn thương...):</label>
+        <textarea rows="3"></textarea>
+    </div>
+
+    <!-- PHẦN IV -->
+    <div class="section-title">IV. TIỀN SỬ DỊ ỨNG, BỆNH TOÀN THÂN & THUỐC ĐANG DÙNG</div>
+    <div class="row">
+        <label style="width: 100%;">1. Tiền sử dị ứng:</label>
+        <div class="checkbox-group" style="padding-left: 10px;">
+            <label class="checkbox-item"><input type="checkbox"> CHƯA TỪNG BỊ DỊ ỨNG</label>
+            <label class="checkbox-item"><input type="checkbox"> CÓ DỊ ỨNG THUỐC / DỊ NGUYÊN</label>
+        </div>
+    </div>
+    <div class="row">
+        <label style="width: 100%;">- Thuốc tê, kháng sinh, thuốc nhỏ mắt, chất cản quang hoặc dị nguyên:</label>
+        <textarea rows="2"></textarea>
+    </div>
+    <div class="row">
+        <label style="width: 100%;">2. Bệnh toàn thân mạn tính & thuốc đang dùng hàng ngày:</label>
+        <div class="checkbox-group" style="padding-left: 10px;">
+            <label class="checkbox-item"><input type="checkbox"> Tăng huyết áp</label>
+            <label class="checkbox-item"><input type="checkbox"> Bệnh tim mạch</label>
+            <label class="checkbox-item"><input type="checkbox"> Đái tháo đường</label>
+            <label class="checkbox-item"><input type="checkbox"> Hen phế quản/COPD</label>
+            <label class="checkbox-item"><input type="checkbox"> Basedow/tuyến giáp</label>
+            <label class="checkbox-item"><input type="checkbox"> Dễ chảy máu</label>
+            <label class="checkbox-item"><input type="checkbox"> Bệnh thận/gan</label>
+            <label class="checkbox-item"><input type="checkbox"> Bệnh tự miễn</label>
+            <label class="checkbox-item"><input type="checkbox"> Phụ nữ mang thai / cho con bú</label>
+            <label class="checkbox-item"><input type="checkbox"> Tiền sử gia đình mắc Glaucoma / mù lòa</label>
+        </div>
+    </div>
+    <div class="row">
+        <label style="width: 100%;">- Tên các thuốc đang uống/tiêm hàng ngày (đặc biệt thuốc chống đông Aspirin/Plavix, corticoid...):</label>
+        <textarea rows="3"></textarea>
+    </div>
+
+    <!-- PHẦN V -->
+    <div class="section-title">V. CAM KẾT VÀ CHỊU TRÁCH NHIỆM PHÁP LÝ</div>
+    <p style="margin: 4px 0;">Tôi cam đoan:</p>
+    <p style="margin: 4px 0; text-align: justify;">1. Mọi thông tin do tôi tự khai về bệnh sử, tiền sử bệnh và thuốc đang dùng ở trên là hoàn toàn trung thực, đầy đủ và chính xác. Tôi đã được giải thích rõ tầm quan trọng của tiền sử y tế đối với an toàn tính mạng và nguy cơ tai biến nếu che giấu.</p>
+    <p style="margin: 4px 0; text-align: justify;">2. Tôi xin tự chịu hoàn toàn trách nhiệm pháp lý và hậu quả sức khỏe phát sinh do việc khai báo sai lệch, thiếu sót hoặc giấu bệnh.</p>
+
+    <div class="footer">
+        <div class="footer-right">
+            <i>Hà Nội, ngày <input type="text" style="width: 30px; text-align: center;"> tháng <input type="text" style="width: 30px; text-align: center;"> năm 20<input type="text" style="width: 30px; text-align: center;"></i><br><br>
+            <b>NGƯỜI BỆNH / NGƯỜI ĐẠI DIỆN HỢP PHÁP</b><br>
+            <i>(Ký, ghi rõ họ tên và mối quan hệ nếu khai thay)</i>
+            <div style="height: 80px;"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
